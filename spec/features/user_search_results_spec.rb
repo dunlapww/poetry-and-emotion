@@ -7,6 +7,12 @@ describe 'As a User' do
       page.fill_in 'author', with: 'Emily'
       click_on('Get Poems')
       expect(current_path).to eq('/search')
+      expect(page).to have_css(".poem", count: 10)
+      within first(".poem") do
+         expect(page).to have_css(".poem_title")
+         expect(page).to have_css(".poem_tone")
+         expect(page).to have_css(".poem_lines")
+      end
     end
   end
 end

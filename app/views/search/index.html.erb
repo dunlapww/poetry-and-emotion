@@ -2,10 +2,10 @@
 
 <ol>
   <% @poems.each do |poem|%>
-  <li>
-    <h3><%= poem.title %> by <%= poem.author %><h3>
-    <h4>General tone of poem: <%= poem.tone %><h4>
-    <p><%= poem.lines %></p>
+  <li class="poem">
+    <h3 class="poem_title"><%= poem.title %> by <%= poem.author %><h3>
+    <h4 class="poem_tone">General tone of poem: <%= poem.tone %><h4>
+    <p class = "poem_lines"><%= poem.lines %></p>
   </li>
   <% end%>
 </ol>

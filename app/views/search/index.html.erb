@@ -1,0 +1,11 @@
+<h1>Poems</h1>
+
+<ol>
+  <% @poems.each do |poem|%>
+  <li>
+    <h3><%= poem.title %> by <%= poem.author %><h3>
+    <h4>General tone of poem: <%= poem.tone %><h4>
+    <p><%= poem.lines %></p>
+  </li>
+  <% end%>
+</ol>
